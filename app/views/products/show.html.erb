@@ -16,17 +16,17 @@
       </div>
       <div class="price"> 
       <% if @product.quantity == 0 %>
-       <button class="soldout">Sold Out</button>
-       <%= button_to add_item_cart_path(product_id: @product.id), class: 'btn' , method: :post do %>     
+        <button class="soldout">Sold Out</button>
+        <%= button_to add_item_cart_path(product_id: @product.id), class: 'btn' , method: :post do %>     
           <%= fa_icon "shopping-cart", text: 'Add' %>
         <% end %>   
-        <% end %>   
+      <% end %>   
         <% if @product.quantity > 0 %>
         <div class="button-right">
         <%= button_to add_item_cart_path(product_id: @product.id), class: 'btn' , method: :post do %>     
            <%= fa_icon "shopping-cart", text: 'Add' %>
-           </div>
-         <% end %>   
+         <% end %> 
+         </div>  
          <% end %>     
       </div>
     </div>
