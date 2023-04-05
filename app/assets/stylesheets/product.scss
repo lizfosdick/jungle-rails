@@ -54,12 +54,18 @@
     p {
       text-align: justify;
     }
-    .quantity,
+    .quantity {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      text-align: right;
+      font-weight: 700;
+    }
     .price {
       display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: flex-end;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
       text-align: right;
       font-weight: 700;
     }
@@ -86,6 +92,9 @@
       color: white;
       font-weight: 700;
       text-align: center;
+    }
+    .button-right {
+      margin-left: auto;
     }
   }
 }
