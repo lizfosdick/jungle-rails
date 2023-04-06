@@ -4,3 +4,5 @@ class AboutController < ApplicationController
   end
 
 end
+
+#adding this to make a change
