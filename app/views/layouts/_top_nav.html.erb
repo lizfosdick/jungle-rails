@@ -43,6 +43,7 @@
         </li> %>
       </ul>
       <ul class="navbar-nav">
+
       <li><%= link_to 'About', [:about], class: "nav-link" %></li>
         <li class="nav-item dropdown">
         <a
@@ -65,6 +66,13 @@
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
           My Cart (<%= cart.size %>) <% end %>
         </li>
+        <% if current_user %>
+        <%= link_to "Logout", [:logout], class: "nav-link" %>
+      <% else %>
+      <%= link_to 'Login', [:login], class: "nav-link" %> <%= link_to 'Signup', [:signup], class: "nav-link" %>
+      <% end %>
+      
+
       </ul>
     </div>
   </div>
